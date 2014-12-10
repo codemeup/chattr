@@ -10,8 +10,8 @@ io.on('connection', function(socket){
   socket.on('chat message', function(msg){ //here1 see html
     io.emit('chat message', msg);
   });
-  socket.on("username", function (nickname) { //this is receiving the message of type 'username'
-    console.log("this user said their username was" + nickname); //see here2 in html
+  socket.on('username', function (nknm) { //this is receiving the message of type 'username'
+    io.emit('username', nknm); //see here2 in html
   });
 });
 
